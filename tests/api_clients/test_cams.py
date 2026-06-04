@@ -29,7 +29,7 @@ def test_get_email_from_env(monkeypatch):
 
 def test_process_dataframe():
     # Create sample DataFrame
-    idx = pd.date_range("2025-01-01", periods=2, freq="H")
+    idx = pd.date_range("2025-01-01", periods=2, freq="h")
     df = pd.DataFrame({"value": [1, 2]}, index=idx)
 
     processed = CAMSClient._process_dataframe(df)
@@ -41,7 +41,7 @@ def test_process_dataframe():
 def test_fetch_data_success(monkeypatch):
     client = CAMSClient()
     # Prepare dummy raw_df and metadata
-    idx = pd.date_range("2025-01-01", periods=2, freq="H")
+    idx = pd.date_range("2025-01-01", periods=2, freq="h")
     raw_df = pd.DataFrame({"a": [10, 20]}, index=idx)
     metadata = {"meta": "data"}
 

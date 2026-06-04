@@ -8,6 +8,18 @@ To install the project use pip
 pip install .
 ```
 
+The full installation above includes research, validation, and all API client
+dependencies. Applications that only serve the NASA POWER and CAMS clients can
+use the smaller portal dependency contract:
+
+```bash
+pip install -r requirements-portal.txt
+pip install --no-deps .
+```
+
+The `--no-deps` installation is intentional: `requirements-portal.txt` is the
+reviewed dependency set for the portal-serving client boundary.
+
 
 If you want to install the package in developer mode, which means that the changes you make in source code will directly be reflected in the package, then use
 
